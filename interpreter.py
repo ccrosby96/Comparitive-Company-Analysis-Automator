@@ -14,6 +14,14 @@ class Interpreter():
         
          '''
     def __init__(self) -> None:
+        self.income_items = ["Sales", "COGS", "Gross Profit", "SG&A", "Other Expense / (Income)", "EBIT", "Interest Expense",
+            "Pre-tax Income", "Income Taxes", "Net Income"]
+        
+        self.income_tags = ["totalRevenue", "costOfRevenue", "grossProfit", "sellingGeneralAdministrative",
+         "totalOperatingExpenses", "ebit", "interestExpense", "incomeBeforeTax", "incomeTaxExpense", "netIncome"]
+        
+        self.income_expressions = ["1", "2", "3", "4", "5 -4", "6", "7", "8", "9", "10"]
+
         self.balance_expressions = ["1", "2", "3", "6 -1 -2 -3","6","7","8 +9","12 -7 -8 -9","6 +12","13",
                                     "14","16 -13 -14","16","14 +7","18 -17", "16 +18", "19", "20", "24", "25"]
 
@@ -30,7 +38,8 @@ class Interpreter():
           'totalCurrentLiabilities','longTermDebtTotal', 'nonCurrentLiabilitiesTotal',
            'noncontrollingInterestInConsolidatedEntity', 'preferredStockTotalEquity',
            'commonStock','retainedEarningsTotalEquity', "accumulatedOtherComprehensiveIncome",
-           'totalStockholderEquity', 'liabilitiesAndStockholdersEquity',]
+           'totalStockholderEquity', 'liabilitiesAndStockholdersEquity']
+
         
         self.balance_tag_lookup = {}
         
